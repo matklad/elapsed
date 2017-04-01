@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/matklad/elapsed.svg?branch=master)](https://travis-ci.org/matklad/elapsed)
 [![Docs](https://docs.rs/elapsed/badge.svg)](https://docs.rs/elapsed)
+[![crates.io](https://img.shields.io/crates/v/elapsed.svg)](https://crates.io/crates/elapsed)
 
 
 ```TOML
