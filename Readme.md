@@ -21,3 +21,6 @@ fn main() {
     // sum = 49995000
 }
 ```
+
+Inspired by [`measureTimeMillis`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.system/measure-time-millis.html) in
+Kotlin.
