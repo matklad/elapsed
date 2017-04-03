@@ -81,8 +81,7 @@ impl ElapsedDuration {
 pub fn measure_time<T, F: FnOnce() -> T>(f: F) -> (ElapsedDuration, T) {
     let start = Instant::now();
     let r = f();
-    let elapsed = Instant::now() - start;
-    (ElapsedDuration(elapsed), r)
+    (ElapsedDuration(start.elapsed()), r)
 }
 
 impl fmt::Display for ElapsedDuration {
