@@ -12,8 +12,8 @@ elapsed = "0.1"
 
 ```Rust
 extern crate elapsed;
-
 use elapsed::measure_time;
+
 fn main() {
     let (elapsed, sum) = measure_time(|| {
         (0..10_000).sum::<u64>()

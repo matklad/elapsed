@@ -10,6 +10,23 @@ use std::io::Write;
 pub struct ElapsedDuration(Duration);
 
 impl ElapsedDuration {
+    /// Wrap an existing `std::time::Duration`. Useful
+    /// for converting `Duration` to string.
+    ///
+    /// # Examples
+    ///
+    /// ```
+    /// use elapsed::ElapsedDuration;
+    ///
+    /// let duration = ::std::time::Duration::from_millis(1922);
+    /// let s = format!("{}", ElapsedDuration::new(duration));
+    /// assert_eq!(s, "1.92 s")
+    /// ```
+    ///
+    pub fn new(duration: Duration) -> ElapsedDuration {
+        ElapsedDuration(duration)
+    }
+
     /// The underlying `std::time::Duration`.
     pub fn duration(&self) -> Duration {
         self.0
@@ -142,9 +159,7 @@ mod tests {
     #[should_panic]
     fn panics_on_huge_times() {
         // In theory, we could handle this,
-        // in practice, `measure_time` should not return times
-        // causing overflow.
-        format!("{}", new_ed(::std::u64::MAX, 0, 0, 0));
+        format!("{}", ElapsedDuration::new(::std::time::Duration::from_secs(::std::u64::MAX)));
     }
 
     #[test]
