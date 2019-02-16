@@ -22,7 +22,7 @@ fn main() {
     println!("sum = {}", sum);
 
     // Prints
-    // elapsed = 227.81 μs
+    // elapsed = 227.812μs
     // sum = 49995000
 }
 ```

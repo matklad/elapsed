@@ -7,3 +7,6 @@ license = "MIT"
 repository = "https://github.com/matklad/elapsed.git"
 documentation = "https://docs.rs/crate/elapsed/0.1.2"
 readme = "README.md"
+
+[dependencies]
+floating-duration = "0.1"
