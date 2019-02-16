@@ -4,6 +4,17 @@
 [![Docs](https://docs.rs/elapsed/badge.svg)](https://docs.rs/elapsed)
 [![crates.io](https://img.shields.io/crates/v/elapsed.svg)](https://crates.io/crates/elapsed)
 
+**Deprecated**
+
+Debug representation for `std::time::Duration` is human-readable now,
+so this snipper works like a charm and doesn't require using external libraries:
+
+```rust
+let start = std::time::Duration();
+let sum = (0..10_000).sum::<u64>();
+eprintln!("elapsed {:?}", start.elapsed()); // note :?
+println!("sum = {}", sum);
+```
 
 ```TOML
 [dependencies]
